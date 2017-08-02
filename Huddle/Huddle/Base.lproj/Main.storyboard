@@ -483,7 +483,7 @@
                                     <barButtonItem title="Delete All?" id="CAJ-QO-BxQ"/>
                                     <barButtonItem systemItem="trash" id="3cG-3d-aTs">
                                         <connections>
-                                            <action selector="trashPhotos:" destination="gAp-Pq-hyw" id="Ttz-hr-aUw"/>
+                                            <action selector="deleteAllPhotos:" destination="gAp-Pq-hyw" id="F7L-xX-bk8"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -572,7 +572,7 @@ Click anywhere on the screen to go back to the first Scrimmage and take a new ph
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="250" translatesAutoresizingMaskIntoConstraints="NO" id="hac-fm-mxz" userLabel="Root Stack View">
-                                <rect key="frame" x="20" y="28" width="335" height="604"/>
+                                <rect key="frame" x="20" y="28" width="335" height="619"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-15" translatesAutoresizingMaskIntoConstraints="NO" id="Hbn-IO-zZN" userLabel="Title Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="115.5"/>
@@ -592,19 +592,13 @@ Click anywhere on the screen to go back to the first Scrimmage and take a new ph
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="U9r-5Z-34q" userLabel="Footer Stack View">
-                                        <rect key="frame" x="0.0" y="365.5" width="335" height="238.5"/>
+                                        <rect key="frame" x="0.0" y="365.5" width="335" height="253.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YqM-oM-KWn" userLabel="Strength Stack View">
-                                                <rect key="frame" x="54" y="0.0" width="227.5" height="184"/>
+                                                <rect key="frame" x="74" y="0.0" width="187" height="199"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="247" verticalHuggingPriority="247" horizontalCompressionResistancePriority="747" verticalCompressionResistancePriority="747" text="Strength Level:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvx-zs-V2b">
-                                                        <rect key="frame" x="0.0" y="75" width="187" height="34.5"/>
-                                                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="25"/>
-                                                        <color key="textColor" red="0.29803921570000003" green="0.30980392159999998" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="##" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJC-Zq-123" userLabel="Score Label">
-                                                        <rect key="frame" x="195" y="75" width="32.5" height="34.5"/>
+                                                        <rect key="frame" x="0.0" y="82.5" width="187" height="34.5"/>
                                                         <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="25"/>
                                                         <color key="textColor" red="0.29803921570000003" green="0.30980392159999998" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -612,7 +606,7 @@ Click anywhere on the screen to go back to the first Scrimmage and take a new ph
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Every time you complete part of your Gameplan, your Huddle grows stronger!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJt-p8-t3q">
-                                                <rect key="frame" x="15.5" y="192" width="304" height="46.5"/>
+                                                <rect key="frame" x="15.5" y="207" width="304" height="46.5"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -621,74 +615,30 @@ Click anywhere on the screen to go back to the first Scrimmage and take a new ph
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="huddlegroup_icon 300x300" translatesAutoresizingMaskIntoConstraints="NO" id="S9N-Qx-IT1">
+                                <rect key="frame" x="67" y="269" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="huddlegroup_background 300x300" translatesAutoresizingMaskIntoConstraints="NO" id="KVg-k4-HA2">
+                                <rect key="frame" x="67" y="269" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="247" verticalHuggingPriority="247" horizontalCompressionResistancePriority="747" verticalCompressionResistancePriority="747" translatesAutoresizingMaskIntoConstraints="NO" id="GA1-Ho-003" userLabel="Content Stack View">
-                                <rect key="frame" x="125.5" y="264" width="293.5" height="180"/>
+                                <rect key="frame" x="150" y="308.5" width="309" height="50"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="255" verticalHuggingPriority="255" horizontalCompressionResistancePriority="755" verticalCompressionResistancePriority="755" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lHt-Fx-Wof" userLabel="Name Stack View">
-                                        <rect key="frame" x="0.0" y="0.0" width="124" height="180"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpX-aE-Bq8">
-                                                <rect key="frame" x="0.0" y="0.0" width="124" height="30"/>
-                                                <color key="backgroundColor" red="0.76078431369999999" green="0.61960784310000006" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" title="Huddle Member 1">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMz-nx-bW2">
-                                                <rect key="frame" x="0.0" y="30" width="124" height="30"/>
-                                                <color key="backgroundColor" red="0.76078431369999999" green="0.61960784310000006" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" title="Huddle Member 2">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hPa-Y1-Y6k">
-                                                <rect key="frame" x="0.0" y="60" width="124" height="30"/>
-                                                <color key="backgroundColor" red="0.76078431369999999" green="0.61960784310000006" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" title="Huddle Member 3">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                            </button>
-                                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="z8b-gu-qxv" userLabel="Photo Library Stack View">
-                                                <rect key="frame" x="0.0" y="90" width="124" height="0.0"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rp3-Ew-nC7" userLabel="Photo Library Button">
-                                                        <rect key="frame" x="37" y="0.0" width="50" height="0.0"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="50" id="MAq-Wi-auA"/>
-                                                            <constraint firstAttribute="height" constant="50" id="krX-gP-zaX"/>
-                                                        </constraints>
-                                                        <state key="normal" image="image_icon"/>
-                                                        <connections>
-                                                            <segue destination="gAp-Pq-hyw" kind="show" id="3QI-9R-mis"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dt2-4p-7Em">
-                                                <rect key="frame" x="0.0" y="90" width="124" height="30"/>
-                                                <color key="backgroundColor" red="0.76078431369999999" green="0.61960784310000006" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" title="Huddle Member 4">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sti-rn-k6k">
-                                                <rect key="frame" x="0.0" y="120" width="124" height="30"/>
-                                                <color key="backgroundColor" red="0.76078431369999999" green="0.61960784310000006" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" title="Huddle Member 5">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHS-q8-4tB">
-                                                <rect key="frame" x="0.0" y="150" width="124" height="30"/>
-                                                <color key="backgroundColor" red="0.76078431369999999" green="0.61960784310000006" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" title="Huddle Member 6">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rp3-Ew-nC7" userLabel="Photo Library Button">
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="75" id="MAq-Wi-auA"/>
+                                            <constraint firstAttribute="height" constant="50" id="krX-gP-zaX"/>
+                                        </constraints>
+                                        <state key="normal" image="camera_icon gray"/>
+                                        <connections>
+                                            <segue destination="gAp-Pq-hyw" kind="show" id="3QI-9R-mis"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="245" verticalHuggingPriority="245" horizontalCompressionResistancePriority="745" verticalCompressionResistancePriority="745" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XRL-2A-TwD">
-                                        <rect key="frame" x="124" y="0.0" width="169.5" height="180"/>
+                                        <rect key="frame" x="75" y="0.0" width="234" height="50"/>
                                         <fontDescription key="fontDescription" name="Satisfy" family="Satisfy" pointSize="40"/>
                                         <state key="normal" title="Gameplan">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -699,45 +649,6 @@ Click anywhere on the screen to go back to the first Scrimmage and take a new ph
                                     </button>
                                 </subviews>
                             </stackView>
-                            <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="s9Y-Ar-vnl" userLabel="Central Profile Collection View">
-                                <rect key="frame" x="97" y="205" width="180" height="264"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.76078431369999999" green="0.2470588235" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mD7-zE-tXT">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="huddleCell" id="5Ua-ef-AXL" userLabel="Cell" customClass="MyCollectionViewCell" customModule="Huddle" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rbw-B6-6oa">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                </imageView>
-                                            </subviews>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstItem="Rbw-B6-6oa" firstAttribute="top" secondItem="5Ua-ef-AXL" secondAttribute="top" id="B0p-U3-fOK"/>
-                                            <constraint firstAttribute="trailing" secondItem="Rbw-B6-6oa" secondAttribute="trailing" id="tce-82-fLE"/>
-                                            <constraint firstAttribute="bottom" secondItem="Rbw-B6-6oa" secondAttribute="bottom" id="u9R-SU-EfM"/>
-                                            <constraint firstItem="Rbw-B6-6oa" firstAttribute="leading" secondItem="5Ua-ef-AXL" secondAttribute="leading" id="vmr-eR-yy1"/>
-                                        </constraints>
-                                        <connections>
-                                            <outlet property="myImageView" destination="Rbw-B6-6oa" id="33K-dO-pML"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="hju-Ee-vz2"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="oGp-R8-Whe"/>
-                                </connections>
-                            </collectionView>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bWc-bn-VFz" userLabel="Menu View">
                                 <rect key="frame" x="255" y="-280" width="120" height="200"/>
                                 <subviews>
@@ -792,27 +703,27 @@ Click anywhere on the screen to go back to the first Scrimmage and take a new ph
                             <constraint firstAttribute="trailing" secondItem="hac-fm-mxz" secondAttribute="trailing" constant="20" symbolic="YES" id="0R0-iz-KBn"/>
                             <constraint firstItem="bWc-bn-VFz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-300" id="33w-TR-b8K"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bWc-bn-VFz" secondAttribute="trailing" constant="-16" id="4FI-Gr-sQ9"/>
+                            <constraint firstItem="rp3-Ew-nC7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8JS-ab-lfq"/>
                             <constraint firstItem="hac-fm-mxz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="9hP-mb-TiL"/>
-                            <constraint firstItem="GA1-Ho-003" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="20" id="OMq-ta-0Wg"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hac-fm-mxz" secondAttribute="bottom" constant="35" id="OYV-zo-4E4"/>
-                            <constraint firstItem="lHt-Fx-Wof" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f5H-Ar-nM4"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="XRL-2A-TwD" secondAttribute="trailing" constant="-60" id="nfW-rF-cJD"/>
+                            <constraint firstItem="GA1-Ho-003" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="OMq-ta-0Wg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hac-fm-mxz" secondAttribute="bottom" constant="20" id="OYV-zo-4E4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XRL-2A-TwD" secondAttribute="trailing" constant="-100" id="nfW-rF-cJD"/>
                             <constraint firstItem="hac-fm-mxz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="rzB-LL-h7O"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Huddle" id="lHy-2N-Eli">
                         <barButtonItem key="rightBarButtonItem" systemItem="organize" id="7JM-dV-eTf">
                             <connections>
-                                <action selector="toggleMenu:" destination="BYZ-38-t0r" id="bwV-rN-b4b"/>
+                                <action selector="toggleMenu:" destination="BYZ-38-t0r" id="WW7-Cm-lgE"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="buttonToPhotoLibrary" destination="rp3-Ew-nC7" id="IoI-Ng-Amr"/>
+                        <outlet property="huddleGroupBackground" destination="KVg-k4-HA2" id="h3l-oD-UAG"/>
                         <outlet property="menuTopConstraint" destination="33w-TR-b8K" id="cuY-yL-oHA"/>
                         <outlet property="menuView" destination="bWc-bn-VFz" id="zWU-tO-iEF"/>
-                        <outlet property="photoLibraryStackView" destination="z8b-gu-qxv" id="Vej-Wk-nJI"/>
-                        <outlet property="scoreLabel" destination="yJC-Zq-123" id="aOF-k7-rQQ"/>
-                        <outlet property="teamThumbnailCollectionView" destination="s9Y-Ar-vnl" id="dem-bA-IPe"/>
+                        <outlet property="strengthLevelLabel" destination="yvx-zs-V2b" id="MlV-uR-lI5"/>
                         <outlet property="verticalLabel" destination="XRL-2A-TwD" id="UWa-nz-ILu"/>
                     </connections>
                 </viewController>
@@ -842,14 +753,14 @@ Click anywhere on the screen to go back to the first Scrimmage and take a new ph
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="141"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Gameplan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="474-np-Diz">
-                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="93"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="86.5"/>
                                                         <color key="tintColor" red="0.34509803921568627" green="0.34901960784313724" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" name="Satisfy" family="Satisfy" pointSize="50"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejx-nL-yyh">
-                                                        <rect key="frame" x="0.0" y="101" width="343" height="40"/>
+                                                        <rect key="frame" x="0.0" y="94.5" width="343" height="46.5"/>
                                                         <string key="text">Strengthen your huddle by
 running through this gameplan!</string>
                                                         <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="17"/>
@@ -1002,7 +913,7 @@ running through this gameplan!</string>
                                 <rect key="frame" x="255" y="-280" width="120" height="200"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="5d0-Gk-rpU">
-                                        <rect key="frame" x="10" y="0.0" width="91" height="200"/>
+                                        <rect key="frame" x="10" y="0.0" width="89" height="200"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVb-C9-wLS">
                                                 <rect key="frame" x="0.0" y="0.0" width="56" height="66.5"/>
@@ -1015,7 +926,7 @@ running through this gameplan!</string>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNX-41-uLN">
-                                                <rect key="frame" x="0.0" y="66.5" width="65" height="67"/>
+                                                <rect key="frame" x="0.0" y="66.5" width="66" height="67"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="17"/>
                                                 <state key="normal" title="+Huddle">
                                                     <color key="titleColor" red="0.34509803919999998" green="0.34901960780000002" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -1025,7 +936,7 @@ running through this gameplan!</string>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zmR-pY-gUe">
-                                                <rect key="frame" x="0.0" y="133.5" width="91" height="66.5"/>
+                                                <rect key="frame" x="0.0" y="133.5" width="89" height="66.5"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="17"/>
                                                 <state key="normal" title="+Resources">
                                                     <color key="titleColor" red="0.34509803919999998" green="0.34901960780000002" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -1107,19 +1018,19 @@ running through this gameplan!</string>
                                 <rect key="frame" x="16" y="28" width="343" height="619"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5Mv-tZ-mmv" userLabel="Header Stack View">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="86.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="103"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="th7-4b-SyF" userLabel="Title Stack View">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="86.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="103"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skills" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHJ-BX-yYV">
-                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="58.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="71.5"/>
                                                         <fontDescription key="fontDescription" name="Satisfy" family="Satisfy" pointSize="50"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drill 1: Convo Starters" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHo-2t-RE4">
-                                                        <rect key="frame" x="0.0" y="66.5" width="343" height="20"/>
+                                                        <rect key="frame" x="0.0" y="79.5" width="343" height="23.5"/>
                                                         <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="17"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
@@ -1129,13 +1040,13 @@ running through this gameplan!</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="x3C-7W-G96" userLabel="Content Stack View">
-                                        <rect key="frame" x="0.0" y="136.5" width="343" height="382.5"/>
+                                        <rect key="frame" x="0.0" y="153" width="343" height="366"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Gvh-v2-bL5" userLabel="G1 Stack View">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="94"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="88.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" text="1." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeK-wb-bFD">
-                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="94"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="88.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="50" id="Wv4-KR-v6V"/>
                                                         </constraints>
@@ -1144,7 +1055,7 @@ running through this gameplan!</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" text="Clearly express your concern." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5E-jv-hJC">
-                                                        <rect key="frame" x="58" y="0.0" width="285" height="94"/>
+                                                        <rect key="frame" x="58" y="0.0" width="285" height="88.5"/>
                                                         <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="27"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
@@ -1152,10 +1063,10 @@ running through this gameplan!</string>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Tmi-vP-1py" userLabel="G2 Stack View">
-                                                <rect key="frame" x="0.0" y="144" width="343" height="94.5"/>
+                                                <rect key="frame" x="0.0" y="138.5" width="343" height="89"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" text="2." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDs-fA-F3h">
-                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="94.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="89"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="50" id="7Ob-kt-lzx"/>
                                                         </constraints>
@@ -1164,7 +1075,7 @@ running through this gameplan!</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" text="Articulate what you have noticed." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pt0-AD-2Fg">
-                                                        <rect key="frame" x="58" y="0.0" width="285" height="94.5"/>
+                                                        <rect key="frame" x="58" y="0.0" width="285" height="89"/>
                                                         <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="27"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
@@ -1172,10 +1083,10 @@ running through this gameplan!</string>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="h0a-n3-Qjc" userLabel="G3 Stack View">
-                                                <rect key="frame" x="0.0" y="288.5" width="343" height="94"/>
+                                                <rect key="frame" x="0.0" y="277.5" width="343" height="88.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" text="3." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vok-q3-Ugp">
-                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="94"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="88.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="50" id="q52-da-pUE"/>
                                                         </constraints>
@@ -1184,7 +1095,7 @@ running through this gameplan!</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" text="Find a comfortable and safe space to talk." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lqu-LH-I4d">
-                                                        <rect key="frame" x="58" y="0.0" width="285" height="94"/>
+                                                        <rect key="frame" x="58" y="0.0" width="285" height="88.5"/>
                                                         <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="27"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
@@ -1271,7 +1182,7 @@ If the responses seem straightforward, read the feedback closely to see how thes
                                 <rect key="frame" x="255" y="-280" width="120" height="200"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="TIM-7a-wMG">
-                                        <rect key="frame" x="10" y="0.0" width="91" height="200"/>
+                                        <rect key="frame" x="10" y="0.0" width="89" height="200"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="usp-3K-Coy">
                                                 <rect key="frame" x="0.0" y="0.0" width="56" height="50"/>
@@ -1284,7 +1195,7 @@ If the responses seem straightforward, read the feedback closely to see how thes
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6PN-FU-Xul">
-                                                <rect key="frame" x="0.0" y="50" width="65" height="50"/>
+                                                <rect key="frame" x="0.0" y="50" width="66" height="50"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="17"/>
                                                 <state key="normal" title="+Huddle">
                                                     <color key="titleColor" red="0.34509803919999998" green="0.34901960780000002" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -1304,7 +1215,7 @@ If the responses seem straightforward, read the feedback closely to see how thes
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mOx-lP-C46">
-                                                <rect key="frame" x="0.0" y="150" width="91" height="50"/>
+                                                <rect key="frame" x="0.0" y="150" width="89" height="50"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="17"/>
                                                 <state key="normal" title="+Resources">
                                                     <color key="titleColor" red="0.34509803919999998" green="0.34901960780000002" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -1799,7 +1710,7 @@ You're picking out some bananas when you see their grocery bag tear and the food
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="71" translatesAutoresizingMaskIntoConstraints="NO" id="KOZ-mc-aHd" userLabel="Root Stack View">
-                                <rect key="frame" x="20" y="84" width="335" height="563"/>
+                                <rect key="frame" x="20" y="40" width="335" height="607"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="bball1_icon" translatesAutoresizingMaskIntoConstraints="NO" id="P1j-we-OlM">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="40"/>
@@ -1808,16 +1719,16 @@ You're picking out some bananas when you see their grocery bag tear and the food
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ucx-4S-jIz" userLabel="Title Stack View">
-                                        <rect key="frame" x="0.0" y="111" width="335" height="62"/>
+                                        <rect key="frame" x="0.0" y="111" width="335" height="109.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hey!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4X-YY-Cgb" userLabel="Title 1">
-                                                <rect key="frame" x="0.0" y="0.0" width="335" height="30.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="35.5"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="26"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to your Huddle." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QC3-8D-4EU" userLabel="Title 2">
-                                                <rect key="frame" x="0.0" y="30.5" width="335" height="31.5"/>
+                                                <rect key="frame" x="0.0" y="35.5" width="335" height="74"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="27"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -1825,13 +1736,13 @@ You're picking out some bananas when you see their grocery bag tear and the food
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ze-ZL-eYx" userLabel="Content">
-                                        <rect key="frame" x="0.0" y="244" width="335" height="198"/>
+                                        <rect key="frame" x="0.0" y="291.5" width="335" height="194.5"/>
                                         <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Cgd-IX-vdz" userLabel="Footer Stack View">
-                                        <rect key="frame" x="0.0" y="513" width="335" height="50"/>
+                                        <rect key="frame" x="0.0" y="557" width="335" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="260" verticalHuggingPriority="260" horizontalCompressionResistancePriority="760" verticalCompressionResistancePriority="760" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Adz-5X-dKl">
                                                 <rect key="frame" x="142.5" y="0.0" width="50" height="50"/>
@@ -1895,22 +1806,22 @@ You're picking out some bananas when you see their grocery bag tear and the food
                                         <rect key="frame" x="0.0" y="71.5" width="343" height="547.5"/>
                                         <subviews>
                                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ROQ-Gq-oEW" userLabel="Overlay View">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="0.0"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="447"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ori-75-j4l" userLabel="Photo Overlay Stack View">
-                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="0.0"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="447"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" translatesAutoresizingMaskIntoConstraints="NO" id="2Bl-pg-Din" userLabel="Photo Image View">
-                                                                <rect key="frame" x="0.0" y="0.0" width="343" height="0.0"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="343" height="400"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="400" id="Ene-P5-dY8"/>
                                                                 </constraints>
                                                             </imageView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7M7-Gm-zwg" userLabel="Final Buttons Stack View">
-                                                                <rect key="frame" x="0.0" y="0.0" width="343" height="0.0"/>
+                                                                <rect key="frame" x="0.0" y="400" width="343" height="47"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="In3-M6-d1H">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="171.5" height="0.0"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="171.5" height="47"/>
                                                                         <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="25"/>
                                                                         <state key="normal" title="Retake?">
                                                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1920,7 +1831,7 @@ You're picking out some bananas when you see their grocery bag tear and the food
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="0gi-rT-5Eq" userLabel="Proceed">
-                                                                        <rect key="frame" x="171.5" y="0.0" width="171.5" height="0.0"/>
+                                                                        <rect key="frame" x="171.5" y="0.0" width="171.5" height="47"/>
                                                                         <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="25"/>
                                                                         <state key="normal" title="Done">
                                                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1943,10 +1854,10 @@ You're picking out some bananas when you see their grocery bag tear and the food
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FG1-UG-Ed6" userLabel="Sub-Content Stack View">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="547.5"/>
+                                                <rect key="frame" x="0.0" y="447" width="343" height="100.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePW-b4-dTP">
-                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="447.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="0.5"/>
                                                         <string key="text">Match up with your friend in your huddle.
 
 Explore your dorm or even your campus for a designated comfortable and safe space to check in and talk.
@@ -1957,7 +1868,7 @@ Snap a picture to share with your huddle.</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="O4j-9Z-Rw7" userLabel="Camera Stack View">
-                                                        <rect key="frame" x="0.0" y="447.5" width="343" height="100"/>
+                                                        <rect key="frame" x="0.0" y="0.5" width="343" height="100"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fR3-75-umr">
                                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="100"/>
@@ -2071,7 +1982,7 @@ Snap a picture to share with your huddle.</string>
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3Fx-6o-G45" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OMo-1h-4GL">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="OMo-1h-4GL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2090,17 +2001,19 @@ Snap a picture to share with your huddle.</string>
         <image name="basketball_gray_icon" width="132" height="132"/>
         <image name="bball1_icon" width="467" height="116"/>
         <image name="camera_icon" width="343" height="232"/>
+        <image name="camera_icon gray" width="348" height="232"/>
         <image name="close_icon" width="193" height="193"/>
         <image name="correct_icon" width="193" height="193"/>
         <image name="hoop_gray_icon" width="120" height="112"/>
-        <image name="image_icon" width="298" height="299"/>
+        <image name="huddlegroup_background 300x300" width="300" height="300"/>
+        <image name="huddlegroup_icon 300x300" width="300" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="beD-bL-dGd"/>
-        <segue reference="qxC-Zd-R9K"/>
         <segue reference="YeT-bE-reu"/>
         <segue reference="y5S-Sl-cre"/>
-        <segue reference="AU4-0a-ovK"/>
-        <segue reference="Cex-w9-Bjg"/>
+        <segue reference="tml-bA-mOk"/>
+        <segue reference="6Yf-ll-2jA"/>
+        <segue reference="cjh-Ul-DFb"/>
+        <segue reference="beD-bL-dGd"/>
     </inferredMetricsTieBreakers>
 </document>

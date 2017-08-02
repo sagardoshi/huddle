@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Huddle/PhotoLibraryViewController.swift"
-            timestampString = "523054811.203169"
+            timestampString = "523331254.485267"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "378"
-            endingLineNumber = "378">
+            startingLineNumber = "392"
+            endingLineNumber = "392">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -24,11 +24,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Huddle/PhotoLibraryViewController.swift"
-            timestampString = "523054811.203169"
+            timestampString = "523331254.485267"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "375"
-            endingLineNumber = "375">
+            startingLineNumber = "389"
+            endingLineNumber = "389">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -38,11 +38,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Huddle/PhotoLibraryViewController.swift"
-            timestampString = "523054811.203169"
+            timestampString = "523331254.485267"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "376"
-            endingLineNumber = "376">
+            startingLineNumber = "390"
+            endingLineNumber = "390">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

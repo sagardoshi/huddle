@@ -78,7 +78,7 @@ class PhotoLibraryViewController: UIViewController, UICollectionViewDataSource, 
         loadPhotosIntoArray()
         
         if titles.count == 0 {
-            noPhotosView.isHidden = false
+            noPhotosView.isHidden = false // If no photos, prompt to take some
         }
         
         menuView.layer.shadowOpacity = 1
@@ -112,14 +112,18 @@ class PhotoLibraryViewController: UIViewController, UICollectionViewDataSource, 
     
     func loadPhotosIntoArray() {
         
+        titles.removeAll()
+        images.removeAll()
+        
         // Get all the file titles that are inside of the ImagePicker folder
         
         do {
             try titles = FileManager.default.contentsOfDirectory(atPath: imagePickerPath.path)
-            print("Was able to fill out titles.")
         } catch {
-            print("Couldn't extract contents from the ImagePicker folder at this location: \(imagePickerPath.path)")
+            // Do nothing
         }
+        
+        
         
         // Extract images of all files inside of ImagePicker folder
         if titles.count > 0 {
@@ -127,17 +131,13 @@ class PhotoLibraryViewController: UIViewController, UICollectionViewDataSource, 
                 let imageLocation = imagePickerPath.path + ("/\(title)")
                 let actualImage = UIImage(contentsOfFile: imageLocation)
                 images.append(actualImage!)
-                
             }
-        } else {
-            print("There were no photos in the ImagePicker folder!! :-(")
         }
-        print("In Huddle Home and there are this many images: " + "\(images.count)")
     }
     
     
     
-    @IBAction func trashPhotos(_ sender: UIBarButtonItem) {
+    func trashPhotos() {
         do {
             let filePaths = try FileManager.default.contentsOfDirectory(atPath: imagePickerPath.path)
             for (index, filePath) in filePaths.enumerated() {
@@ -159,9 +159,22 @@ class PhotoLibraryViewController: UIViewController, UICollectionViewDataSource, 
         }
     }
     
+    @IBAction func deleteAllPhotos(_ sender: Any) {
+        let refreshAlert = UIAlertController(title: "Delete All Photos?", message: "Sure you want to do this? You'll have to take new photos to repopulate the Photo Library.", preferredStyle: UIAlertControllerStyle.alert)
+        
+        refreshAlert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action: UIAlertAction!) in
+            self.trashPhotos()
+            self.noPhotosView.isHidden = false
+        }))
+        
+        refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+            // Do nothing (this should dismiss the UIAlertController, though)
+        }))
+        
+        present(refreshAlert, animated: true, completion: nil)
+
     
-    
-    
+    }
     
     
     
@@ -174,6 +187,8 @@ class PhotoLibraryViewController: UIViewController, UICollectionViewDataSource, 
     
     // make a cell for each cell index path
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        self.photoLibraryCollectionView.backgroundColor = huddleColors.huddlePink.pickThisColor
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! MyCollectionViewCell
         let finalPhoto = images[indexPath.item]
@@ -244,7 +259,6 @@ class PhotoLibraryViewController: UIViewController, UICollectionViewDataSource, 
         guard deletion else {
             return
         }
-        
         
         if let index = selectedPhotos.index(of: images[indexPath.item]) {
             selectedPhotos.remove(at: index)
