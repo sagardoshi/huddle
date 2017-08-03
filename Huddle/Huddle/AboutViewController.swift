@@ -46,6 +46,7 @@ class AboutViewController: UIViewController {
     func updatePage() {
         contentLabel.text = pageContent[currentAboutPage]
         contentLabel.adjustsFontSizeToFitWidth = true
+        
         basketballIcon.image = iconContent[currentAboutPage]
     }
     

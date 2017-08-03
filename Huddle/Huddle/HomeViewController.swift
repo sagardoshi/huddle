@@ -86,14 +86,13 @@ class HomeViewController: UIViewController {
         if currentScore < 0 {
             colorChoice = huddleColors.huddleWhite.pickThisColor
         }
+        
         strengthLevelLabel.textColor = colorChoice
     
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tintHuddleGroupBackground(currentScore: score)
         
         if score >= 50 {
             buttonToPhotoLibrary.isHidden = false
@@ -102,6 +101,7 @@ class HomeViewController: UIViewController {
         verticalLabel.transform = CGAffineTransform(rotationAngle: -CGFloat.pi/2)
         strengthLevelLabel.text = "Strength Level: \(score)"
         
+        tintHuddleGroupBackground(currentScore: score)
         
         menuView.layer.shadowOpacity = 1
         menuView.layer.shadowOffset = CGSize(width: 5, height: 5)

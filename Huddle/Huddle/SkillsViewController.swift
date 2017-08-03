@@ -38,8 +38,8 @@ class SkillsViewController: UIViewController {
     
     
     @IBAction func removeOverlay(_ sender: Any) {
-        overlayTopConstraint.constant = 650
-        overlayBottomConstraint.constant = -550
+        overlayTopConstraint.constant = 1650
+        overlayBottomConstraint.constant = -1550
         UIView.animate(withDuration: 0.3, animations: {self.view.layoutIfNeeded()})
     }
     

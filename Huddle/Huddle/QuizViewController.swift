@@ -77,7 +77,7 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var button3: UIButton!
     @IBOutlet weak var button4: UIButton!
-    @IBOutlet weak var button5: UIButton!
+//    @IBOutlet weak var button5: UIButton!
     
     @IBOutlet var quizButtons: [UIButton]!
     
@@ -126,20 +126,20 @@ class QuizViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        switch currentQuiz {
-        case 1:
-            headerImage.image = q1HeaderImage
-            headerDescription.text = q1HeaderDescription
-            labelButtons(buttonCollection: quizButtons, buttonDescriptions: q1ButtonDescriptions)
-        case 2:
-            headerImage.image = q2HeaderImage
-            headerDescription.text = q2HeaderDescription
-            labelButtons(buttonCollection: quizButtons, buttonDescriptions: q2ButtonDescriptions)
-        default:
-            headerDescription.text = q1HeaderDescription
-            labelButtons(buttonCollection: quizButtons, buttonDescriptions: q1ButtonDescriptions)
-        }
-        headerDescription.adjustsFontSizeToFitWidth = true
+//        switch currentQuiz {
+//        case 1:
+//            headerImage.image = q1HeaderImage
+//            headerDescription.text = q1HeaderDescription
+//            labelButtons(buttonCollection: quizButtons, buttonDescriptions: q1ButtonDescriptions)
+//        case 2:
+//            headerImage.image = q2HeaderImage
+//            headerDescription.text = q2HeaderDescription
+//            labelButtons(buttonCollection: quizButtons, buttonDescriptions: q2ButtonDescriptions)
+//        default:
+//            headerDescription.text = q1HeaderDescription
+//            labelButtons(buttonCollection: quizButtons, buttonDescriptions: q1ButtonDescriptions)
+//        }
+//        headerDescription.adjustsFontSizeToFitWidth = true
     }
     
 
@@ -235,8 +235,8 @@ class QuizViewController: UIViewController {
     
     @IBAction func removeOverlay(_ sender: Any) {
         if (overlayVisible) {
-            overlayTopConstraint.constant = 650
-            overlayBottomConstraint.constant = -550
+            overlayTopConstraint.constant = 1650
+            overlayBottomConstraint.constant = -1550
         }
         UIView.animate(withDuration: 0.3, animations: {self.view.layoutIfNeeded()})
         overlayVisible = !overlayVisible
@@ -273,6 +273,21 @@ class QuizViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        switch currentQuiz {
+        case 1:
+            headerImage.image = q1HeaderImage
+            headerDescription.text = q1HeaderDescription
+            labelButtons(buttonCollection: quizButtons, buttonDescriptions: q1ButtonDescriptions)
+        case 2:
+            headerImage.image = q2HeaderImage
+            headerDescription.text = q2HeaderDescription
+            labelButtons(buttonCollection: quizButtons, buttonDescriptions: q2ButtonDescriptions)
+        default:
+            headerDescription.text = q1HeaderDescription
+            labelButtons(buttonCollection: quizButtons, buttonDescriptions: q1ButtonDescriptions)
+        }
+        headerDescription.adjustsFontSizeToFitWidth = true
+        
         menuView.layer.shadowOpacity = 1
         menuView.layer.shadowOffset = CGSize(width: 5, height: 5)
         menuView.layer.shadowRadius = 5
@@ -295,12 +310,6 @@ class QuizViewController: UIViewController {
         }
         UIView.animate(withDuration: 0.3, animations: {self.view.layoutIfNeeded()})
         menuVisible = !menuVisible
-    }
-
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 }
