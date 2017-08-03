@@ -111,6 +111,9 @@ class QuizViewController: UIViewController {
         var i = 0
         for eachButton in buttonCollection {
             
+            // Soften the button edges
+            eachButton.layer.cornerRadius = 10
+            
             // Dynamically add title, given quiz number
             eachButton.setTitle(buttonDescriptions[i], for: UIControlState.normal)
             eachButton.titleLabel?.adjustsFontSizeToFitWidth = true
@@ -121,25 +124,6 @@ class QuizViewController: UIViewController {
             i += 1
         }
         
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-//        switch currentQuiz {
-//        case 1:
-//            headerImage.image = q1HeaderImage
-//            headerDescription.text = q1HeaderDescription
-//            labelButtons(buttonCollection: quizButtons, buttonDescriptions: q1ButtonDescriptions)
-//        case 2:
-//            headerImage.image = q2HeaderImage
-//            headerDescription.text = q2HeaderDescription
-//            labelButtons(buttonCollection: quizButtons, buttonDescriptions: q2ButtonDescriptions)
-//        default:
-//            headerDescription.text = q1HeaderDescription
-//            labelButtons(buttonCollection: quizButtons, buttonDescriptions: q1ButtonDescriptions)
-//        }
-//        headerDescription.adjustsFontSizeToFitWidth = true
     }
     
 

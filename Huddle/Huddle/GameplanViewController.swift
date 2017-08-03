@@ -48,7 +48,7 @@ class GameplanViewController: UIViewController {
                 button.titleLabel?.font = UIFont(name: "OpenSans-Regular", size: 16)
                 
                 // Highlighted entire row
-                button.layer.cornerRadius = 15
+                button.layer.cornerRadius = 10
                 button.layer.borderWidth = 1
                 button.layer.borderColor = UIColor.white.cgColor
                 button.backgroundColor = button.backgroundColor?.withAlphaComponent(1)

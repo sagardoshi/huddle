@@ -32,6 +32,9 @@ class ScenarioViewController: UIViewController {
             break;
         }
         
+        // Soften the button edges
+        scenarioButton.layer.cornerRadius = 10
+        
     }
     
     // All below is related to menu animations
@@ -69,11 +72,4 @@ class ScenarioViewController: UIViewController {
         menuVisible = !menuVisible
     }
 
-    
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-}

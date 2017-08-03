@@ -22,19 +22,7 @@ class SkillsViewController: UIViewController {
     @IBOutlet weak var overlayTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var overlayBottomConstraint: NSLayoutConstraint!
     
-    
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        if !isFirstSkillsScreen {
-            subtitle.text = "Drill 2: Convo Continues"
-            skill1.text = "Respond and reflect."
-            skill2.text = "Ask open-ended questions."
-            skill3.text = "Pursue understanding."
-        }
-        
-    }
+    @IBOutlet weak var practiceButton: UIButton!
     
     
     @IBAction func removeOverlay(_ sender: Any) {
@@ -45,7 +33,7 @@ class SkillsViewController: UIViewController {
     
     
     
-    // All below is related to menu animation
+    // Most below is related to menu animation
     
     
     @IBOutlet weak var menuView: UIView!
@@ -56,6 +44,17 @@ class SkillsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Soften the button edges
+        practiceButton.layer.cornerRadius = 10
+        
+        if !isFirstSkillsScreen {
+            subtitle.text = "Drill 2: Convo Continues"
+            skill1.text = "Respond and reflect."
+            skill2.text = "Ask open-ended questions."
+            skill3.text = "Pursue understanding."
+        }
+
         
         menuView.layer.shadowOpacity = 1
         menuView.layer.shadowOffset = CGSize(width: 5, height: 5)

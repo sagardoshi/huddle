@@ -571,82 +571,98 @@ Click anywhere on the screen to go back to the first Scrimmage and take a new ph
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="350" translatesAutoresizingMaskIntoConstraints="NO" id="hac-fm-mxz" userLabel="Root Stack View">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="hac-fm-mxz" userLabel="Root Stack View">
                                 <rect key="frame" x="20" y="28" width="335" height="619"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-15" translatesAutoresizingMaskIntoConstraints="NO" id="Hbn-IO-zZN" userLabel="Title Stack View">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="115.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Hbn-IO-zZN" userLabel="Title Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="120"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Huddle" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7H-M1-n3X">
-                                                <rect key="frame" x="0.0" y="0.0" width="335" height="107"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Huddle" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7H-M1-n3X">
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="96.5"/>
                                                 <fontDescription key="fontDescription" name="Satisfy" family="Satisfy" pointSize="75"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap Gameplan to begin!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2k-vB-JhZ">
-                                                <rect key="frame" x="0.0" y="92" width="335" height="23.5"/>
+                                                <rect key="frame" x="0.0" y="96.5" width="335" height="23.5"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="jE5-s6-EFe"/>
+                                        </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="U9r-5Z-34q" userLabel="Footer Stack View">
-                                        <rect key="frame" x="0.0" y="465.5" width="335" height="153.5"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZu-9T-FqZ">
+                                        <rect key="frame" x="0.0" y="220" width="335" height="179"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="huddlegroup_icon 300x300" translatesAutoresizingMaskIntoConstraints="NO" id="S9N-Qx-IT1">
+                                                <rect key="frame" x="32.5" y="-45.5" width="270" height="270"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="huddlegroup_background 300x300" translatesAutoresizingMaskIntoConstraints="NO" id="KVg-k4-HA2">
+                                                <rect key="frame" x="32.5" y="-45.5" width="270" height="270"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="KVg-k4-HA2" firstAttribute="leading" secondItem="dZu-9T-FqZ" secondAttribute="leading" constant="32.357348703169919" id="31j-IK-DxN"/>
+                                            <constraint firstAttribute="trailing" secondItem="S9N-Qx-IT1" secondAttribute="trailing" constant="32.642651296830195" id="BNI-UP-Ap1"/>
+                                            <constraint firstAttribute="bottom" secondItem="KVg-k4-HA2" secondAttribute="bottom" constant="-45.5" id="Nr2-hF-iFp"/>
+                                            <constraint firstItem="S9N-Qx-IT1" firstAttribute="leading" secondItem="dZu-9T-FqZ" secondAttribute="leading" constant="32.357348703169919" id="j0I-EA-plZ"/>
+                                            <constraint firstItem="S9N-Qx-IT1" firstAttribute="top" secondItem="dZu-9T-FqZ" secondAttribute="top" constant="-45.5" id="kxV-Kw-fq4"/>
+                                            <constraint firstAttribute="trailing" secondItem="KVg-k4-HA2" secondAttribute="trailing" constant="32.642651296830195" id="uob-e1-eX9"/>
+                                            <constraint firstAttribute="bottom" secondItem="S9N-Qx-IT1" secondAttribute="bottom" constant="-45.5" id="yvh-6W-3Z7"/>
+                                            <constraint firstItem="KVg-k4-HA2" firstAttribute="top" secondItem="dZu-9T-FqZ" secondAttribute="top" constant="-45.5" id="zv9-aD-aQu"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="U9r-5Z-34q" userLabel="Footer Stack View">
+                                        <rect key="frame" x="0.0" y="499" width="335" height="120"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YqM-oM-KWn" userLabel="Strength Stack View">
-                                                <rect key="frame" x="74" y="0.0" width="187" height="99"/>
+                                                <rect key="frame" x="74" y="0.0" width="187" height="65.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="247" verticalHuggingPriority="247" horizontalCompressionResistancePriority="747" verticalCompressionResistancePriority="747" text="Strength Level:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvx-zs-V2b">
-                                                        <rect key="frame" x="0.0" y="32.5" width="187" height="34.5"/>
+                                                        <rect key="frame" x="0.0" y="15.5" width="187" height="34.5"/>
                                                         <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="25"/>
                                                         <color key="textColor" red="0.29803921570000003" green="0.30980392159999998" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Every time you complete part of your Gameplan, your Huddle grows stronger!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJt-p8-t3q">
-                                                <rect key="frame" x="15.5" y="107" width="304" height="46.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Every time you complete part of your Gameplan, your Huddle grows stronger!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJt-p8-t3q">
+                                                <rect key="frame" x="15.5" y="73.5" width="304" height="46.5"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="HSd-w0-YSg"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="huddlegroup_icon 300x300" translatesAutoresizingMaskIntoConstraints="NO" id="S9N-Qx-IT1">
-                                <rect key="frame" x="37" y="184" width="300" height="300"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="huddlegroup_background 300x300" translatesAutoresizingMaskIntoConstraints="NO" id="KVg-k4-HA2">
-                                <rect key="frame" x="37" y="184" width="300" height="300"/>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="247" verticalHuggingPriority="247" horizontalCompressionResistancePriority="747" verticalCompressionResistancePriority="747" translatesAutoresizingMaskIntoConstraints="NO" id="GA1-Ho-003" userLabel="Content Stack View">
-                                <rect key="frame" x="150" y="308.5" width="309" height="50"/>
-                                <subviews>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rp3-Ew-nC7" userLabel="Photo Library Button">
-                                        <rect key="frame" x="0.0" y="0.0" width="75" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="75" id="MAq-Wi-auA"/>
-                                            <constraint firstAttribute="height" constant="50" id="krX-gP-zaX"/>
-                                        </constraints>
-                                        <state key="normal" image="camera_icon gray"/>
-                                        <connections>
-                                            <segue destination="gAp-Pq-hyw" kind="show" id="3QI-9R-mis"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="245" verticalHuggingPriority="245" horizontalCompressionResistancePriority="745" verticalCompressionResistancePriority="745" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XRL-2A-TwD">
-                                        <rect key="frame" x="75" y="0.0" width="234" height="50"/>
-                                        <fontDescription key="fontDescription" name="Satisfy" family="Satisfy" pointSize="40"/>
-                                        <state key="normal" title="Gameplan">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="Hpu-U6-GbR" kind="show" id="qxC-Zd-R9K"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rp3-Ew-nC7" userLabel="Photo Library Button">
+                                <rect key="frame" x="150" y="308" width="75" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="MAq-Wi-auA"/>
+                                    <constraint firstAttribute="height" constant="50" id="krX-gP-zaX"/>
+                                </constraints>
+                                <state key="normal" image="camera_icon gray"/>
+                                <connections>
+                                    <segue destination="gAp-Pq-hyw" kind="show" id="3QI-9R-mis"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="245" verticalHuggingPriority="245" horizontalCompressionResistancePriority="745" verticalCompressionResistancePriority="745" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XRL-2A-TwD">
+                                <rect key="frame" x="260" y="299" width="149" height="69"/>
+                                <fontDescription key="fontDescription" name="Satisfy" family="Satisfy" pointSize="40"/>
+                                <state key="normal" title="Gameplan">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Hpu-U6-GbR" kind="show" id="qxC-Zd-R9K"/>
+                                </connections>
+                            </button>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bWc-bn-VFz" userLabel="Menu View">
                                 <rect key="frame" x="255" y="-280" width="120" height="200"/>
                                 <subviews>
@@ -699,18 +715,16 @@ Click anywhere on the screen to go back to the first Scrimmage and take a new ph
                         <color key="backgroundColor" red="0.26274509800000001" green="0.70980392160000005" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="hac-fm-mxz" secondAttribute="trailing" constant="20" symbolic="YES" id="0R0-iz-KBn"/>
-                            <constraint firstItem="KVg-k4-HA2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1ea-eh-E0x"/>
                             <constraint firstItem="bWc-bn-VFz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-300" id="33w-TR-b8K"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bWc-bn-VFz" secondAttribute="trailing" constant="-16" id="4FI-Gr-sQ9"/>
-                            <constraint firstItem="rp3-Ew-nC7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8JS-ab-lfq"/>
                             <constraint firstItem="hac-fm-mxz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="9hP-mb-TiL"/>
-                            <constraint firstItem="GA1-Ho-003" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="OMq-ta-0Wg"/>
+                            <constraint firstItem="XRL-2A-TwD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KEU-im-iUb"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hac-fm-mxz" secondAttribute="bottom" constant="20" id="OYV-zo-4E4"/>
-                            <constraint firstItem="S9N-Qx-IT1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fto-NS-3sw"/>
-                            <constraint firstItem="KVg-k4-HA2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jnM-yE-TzT"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="XRL-2A-TwD" secondAttribute="trailing" constant="-100" id="nfW-rF-cJD"/>
+                            <constraint firstItem="rp3-Ew-nC7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dLI-gk-4tf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XRL-2A-TwD" secondAttribute="trailing" constant="-50" id="eKL-Xs-UeY"/>
+                            <constraint firstAttribute="bottom" secondItem="hac-fm-mxz" secondAttribute="bottom" constant="20" id="p5j-FU-M0G"/>
+                            <constraint firstItem="rp3-Ew-nC7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="px1-Y1-Z6i"/>
                             <constraint firstItem="hac-fm-mxz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="rzB-LL-h7O"/>
-                            <constraint firstItem="S9N-Qx-IT1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uxX-Ec-9Ty"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Huddle" id="lHy-2N-Eli">
@@ -1267,6 +1281,7 @@ If the responses seem straightforward, read the feedback closely to see how thes
                         <outlet property="overlayBottomConstraint" destination="YXB-Vq-zYs" id="B1Q-Rh-Sgr"/>
                         <outlet property="overlayTopConstraint" destination="z7a-kG-hOq" id="J7A-nz-KSf"/>
                         <outlet property="overlayView" destination="ETQ-Xk-hWj" id="aEH-vP-TI6"/>
+                        <outlet property="practiceButton" destination="2XN-o0-VJi" id="VEp-Em-Y14"/>
                         <outlet property="skill1" destination="A5E-jv-hJC" id="geA-F7-toD"/>
                         <outlet property="skill2" destination="pt0-AD-2Fg" id="bNh-Ix-cnE"/>
                         <outlet property="skill3" destination="Lqu-LH-I4d" id="XFA-WI-M58"/>
@@ -1461,25 +1476,23 @@ You're picking out some bananas when you see their grocery bag tear and the food
                                                     </imageView>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="MXs-Z2-ghT" userLabel="Center Stack View">
+                                            <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="MXs-Z2-ghT" userLabel="Center Stack View">
                                                 <rect key="frame" x="0.0" y="190" width="335" height="429"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="x1j-xm-a1Y" userLabel="Description Stack View">
-                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="69.5"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How might you start (or not start) a conversation by *expressing concern* in this scenario?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Auo-yD-k5G">
-                                                                <rect key="frame" x="0.0" y="0.0" width="335" height="69.5"/>
-                                                                <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="17"/>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="pso-0l-Ddd" userLabel="Buttons Stack View">
-                                                        <rect key="frame" x="0.0" y="119.5" width="335" height="309.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="How might you start (or not start) a conversation by *expressing concern* in this scenario?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Auo-yD-k5G">
+                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="100"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="100" id="fsH-N3-X0H"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="pso-0l-Ddd" userLabel="Buttons Stack View">
+                                                        <rect key="frame" x="0.0" y="140" width="335" height="289"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfo-E9-DJS" userLabel="Button1">
-                                                                <rect key="frame" x="0.0" y="0.0" width="335" height="47.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="335" height="42.5"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="20"/>
                                                                 <state key="normal" title="Button1">
@@ -1490,7 +1503,7 @@ You're picking out some bananas when you see their grocery bag tear and the food
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jT7-HP-eiJ">
-                                                                <rect key="frame" x="0.0" y="87.5" width="335" height="47.5"/>
+                                                                <rect key="frame" x="0.0" y="82.5" width="335" height="42"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="20"/>
                                                                 <state key="normal" title="Button2">
@@ -1500,19 +1513,19 @@ You're picking out some bananas when you see their grocery bag tear and the food
                                                                     <action selector="answerGiven:" destination="cpv-pW-zS0" eventType="touchUpInside" id="T7V-f6-l5Y"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arx-P6-e3h">
-                                                                <rect key="frame" x="0.0" y="175" width="335" height="47"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mxO-Jc-37A" userLabel="Button3">
+                                                                <rect key="frame" x="0.0" y="164.5" width="335" height="42.5"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="20"/>
                                                                 <state key="normal" title="Button3">
                                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="answerGiven:" destination="cpv-pW-zS0" eventType="touchUpInside" id="yXP-V9-E3J"/>
+                                                                    <action selector="answerGiven:" destination="cpv-pW-zS0" eventType="touchUpInside" id="oi3-hp-eo7"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YD6-X7-sha">
-                                                                <rect key="frame" x="0.0" y="262" width="335" height="47.5"/>
+                                                                <rect key="frame" x="0.0" y="247" width="335" height="42"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="20"/>
                                                                 <state key="normal" title="Button4">
@@ -1523,6 +1536,11 @@ You're picking out some bananas when you see their grocery bag tear and the food
                                                                 </connections>
                                                             </button>
                                                         </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="YD6-X7-sha" firstAttribute="height" secondItem="zfo-E9-DJS" secondAttribute="height" id="NhA-Ab-IbB"/>
+                                                            <constraint firstItem="jT7-HP-eiJ" firstAttribute="height" secondItem="zfo-E9-DJS" secondAttribute="height" id="inQ-Vi-k9v"/>
+                                                            <constraint firstItem="mxO-Jc-37A" firstAttribute="height" secondItem="zfo-E9-DJS" secondAttribute="height" id="oRg-x6-OdW"/>
+                                                        </constraints>
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
@@ -1531,7 +1549,7 @@ You're picking out some bananas when you see their grocery bag tear and the food
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eru-W6-JlW" userLabel="Overlay View">
-                                <rect key="frame" x="16" y="670" width="343" height="547"/>
+                                <rect key="frame" x="16" y="1670" width="343" height="547"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Gp7-5L-fnZ" userLabel="Overlay Stack View">
                                         <rect key="frame" x="20" y="20" width="303" height="507"/>
@@ -1655,10 +1673,10 @@ You're picking out some bananas when you see their grocery bag tear and the food
                             <constraint firstAttribute="trailingMargin" secondItem="eru-W6-JlW" secondAttribute="trailing" id="Fuu-ZJ-piA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="IW8-j4-8iX" secondAttribute="trailing" constant="-16" id="GFH-nZ-ekk"/>
                             <constraint firstItem="IW8-j4-8iX" firstAttribute="top" secondItem="BlL-H6-psc" secondAttribute="bottom" constant="-300" id="KeJ-Iw-CeW"/>
-                            <constraint firstItem="eru-W6-JlW" firstAttribute="top" secondItem="BlL-H6-psc" secondAttribute="bottom" constant="650" id="Kfo-50-Cf8"/>
+                            <constraint firstItem="eru-W6-JlW" firstAttribute="top" secondItem="BlL-H6-psc" secondAttribute="bottom" constant="1650" id="Kfo-50-Cf8"/>
                             <constraint firstItem="HsA-Xp-FRs" firstAttribute="leading" secondItem="o71-oj-CWm" secondAttribute="leading" constant="20" symbolic="YES" id="P4U-hA-DPl"/>
                             <constraint firstItem="own-Fh-1s1" firstAttribute="top" secondItem="HsA-Xp-FRs" secondAttribute="bottom" constant="20" id="mKH-Uo-0Si"/>
-                            <constraint firstItem="own-Fh-1s1" firstAttribute="top" secondItem="eru-W6-JlW" secondAttribute="bottom" constant="-550" id="qUe-Vf-y4c"/>
+                            <constraint firstItem="own-Fh-1s1" firstAttribute="top" secondItem="eru-W6-JlW" secondAttribute="bottom" constant="-1550" id="qUe-Vf-y4c"/>
                             <constraint firstItem="eru-W6-JlW" firstAttribute="leading" secondItem="o71-oj-CWm" secondAttribute="leadingMargin" id="yrs-eG-gzd"/>
                             <constraint firstAttribute="trailing" secondItem="HsA-Xp-FRs" secondAttribute="trailing" constant="20" symbolic="YES" id="z1r-hW-U4T"/>
                         </constraints>
@@ -1673,7 +1691,7 @@ You're picking out some bananas when you see their grocery bag tear and the food
                     <connections>
                         <outlet property="button1" destination="zfo-E9-DJS" id="PPr-SQ-z00"/>
                         <outlet property="button2" destination="jT7-HP-eiJ" id="DsL-m8-g3z"/>
-                        <outlet property="button3" destination="arx-P6-e3h" id="WXB-uI-3OQ"/>
+                        <outlet property="button3" destination="mxO-Jc-37A" id="6IY-nI-Pd6"/>
                         <outlet property="button4" destination="YD6-X7-sha" id="p4u-F2-Tbd"/>
                         <outlet property="headerDescription" destination="Auo-yD-k5G" id="loP-4V-WJ5"/>
                         <outlet property="headerImage" destination="Dxs-Lm-zjh" id="d5v-6t-mwI"/>
@@ -1687,10 +1705,10 @@ You're picking out some bananas when you see their grocery bag tear and the food
                         <outlet property="overlayViewProceedButton" destination="aNF-fM-llw" id="gAw-AI-XEj"/>
                         <outlet property="overlayViewProceedButtonStackView" destination="4CS-av-vO8" id="8uy-Aj-Txq"/>
                         <outlet property="overlayViewText" destination="nl8-yb-L1u" id="UAe-g8-bQM"/>
-                        <outletCollection property="quizButtons" destination="zfo-E9-DJS" collectionClass="NSMutableArray" id="Vnb-2X-jaJ"/>
-                        <outletCollection property="quizButtons" destination="jT7-HP-eiJ" collectionClass="NSMutableArray" id="vUE-D7-x9g"/>
-                        <outletCollection property="quizButtons" destination="arx-P6-e3h" collectionClass="NSMutableArray" id="w7y-2G-7NJ"/>
-                        <outletCollection property="quizButtons" destination="YD6-X7-sha" collectionClass="NSMutableArray" id="19A-Rx-lg7"/>
+                        <outletCollection property="quizButtons" destination="zfo-E9-DJS" collectionClass="NSMutableArray" id="qEJ-2y-lyV"/>
+                        <outletCollection property="quizButtons" destination="jT7-HP-eiJ" collectionClass="NSMutableArray" id="VDC-dw-yke"/>
+                        <outletCollection property="quizButtons" destination="mxO-Jc-37A" collectionClass="NSMutableArray" id="sua-Vk-re2"/>
+                        <outletCollection property="quizButtons" destination="YD6-X7-sha" collectionClass="NSMutableArray" id="Rzu-74-R2q"/>
                         <segue destination="nIG-Hz-7oL" kind="show" identifier="Quiz 1 Done" id="td1-fM-1y3"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="Quiz 2 Done" id="TjE-N8-CrT"/>
                     </connections>
@@ -1984,7 +2002,7 @@ Snap a picture to share with your huddle.</string>
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3Fx-6o-G45" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="OMo-1h-4GL">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OMo-1h-4GL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2012,9 +2030,9 @@ Snap a picture to share with your huddle.</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="td1-fM-1y3"/>
+        <segue reference="Ip6-w5-P4v"/>
         <segue reference="KY2-s6-FdT"/>
         <segue reference="YBm-PI-A7i"/>
-        <segue reference="Ip6-w5-P4v"/>
         <segue reference="F8c-aB-u5j"/>
         <segue reference="x2W-ia-RFo"/>
     </inferredMetricsTieBreakers>
